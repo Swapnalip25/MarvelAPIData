@@ -29,6 +29,7 @@ extension StoryboardProvider where Self: UIViewController {
         return viewController
     }
 }
+
 extension UIViewController: StoryboardProvider { }
 
 enum StoryBoard: String {
@@ -38,6 +39,7 @@ enum StoryBoard: String {
 private struct StoryboardConstants {
     static let mainStoryBoard = "Main"
     static let characterDetailsNavigation = "CharacterDetailsViewController"
+    static let comicDetailsNavigation = "ComicDetailsViewController"
 }
 
 func getStoryboard(name:String) -> UIStoryboard {
@@ -48,4 +50,9 @@ func getCharacterDetailsViewController() -> UIViewController? {
     let rootViewController = getStoryboard(name: StoryboardConstants.mainStoryBoard).instantiateViewController(withIdentifier: StoryboardConstants.characterDetailsNavigation)
     
     return rootViewController
+}
+
+func getComicDetailsViewController() -> UIViewController? {
+    let vc = getStoryboard(name: StoryboardConstants.mainStoryBoard).instantiateViewController(identifier: StoryboardConstants.comicDetailsNavigation)
+    return vc
 }

@@ -19,6 +19,7 @@ protocol ComicPresenter {
     func loadPullToRefreshData()
     func getSortingType() -> SortType
     func sortModulesBy(type: SortType)
+    func navigateToComicDetailsScreen(index: Int)
 }
 
 protocol ComicOutput: AnyObject {
@@ -121,6 +122,12 @@ class ComicPresenterImpl: ComicPresenter {
     func configureComicCell(indexpath: IndexPath, cell: ComicCollectionViewCell) {
         if let result = isSearchEnabled ? searchResultComicArray[safe: indexpath.row] : self.comicArray[safe: indexpath.row] {
             cell.configureComicData(result: result)
+        }
+    }
+    
+    func navigateToComicDetailsScreen(index: Int) {
+        if let result = isSearchEnabled ? searchResultComicArray[safe: index] : self.comicArray[safe: index] {
+            self.router.navigateToComicDetailsScreen(comicData: result)
         }
     }
 }
