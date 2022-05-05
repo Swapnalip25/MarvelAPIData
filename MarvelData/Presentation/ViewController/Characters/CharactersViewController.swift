@@ -72,7 +72,11 @@ extension CharactersViewController: UICollectionViewDataSource, UICollectionView
         }
         return UICollectionViewCell()
     }
-            
+       
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.presenter?.navigateToDetailsScreen(index: indexPath.row)
+    }
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height

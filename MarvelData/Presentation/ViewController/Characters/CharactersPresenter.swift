@@ -19,6 +19,7 @@ protocol CharactersPresenter {
     func getSearchResult(atIndex index: Int) -> String
     func numberOfSearchResultCount() -> Int
     func filterSearchHistory(searchTerm: String)
+    func navigateToDetailsScreen(index: Int)
 }
 
 protocol CharactersOutput: AnyObject {
@@ -116,6 +117,12 @@ class CharactersPresenterImpl: CharactersPresenter {
     func configureCharactersCell(indexpath: IndexPath, cell: CharacterCollectionViewCell) {
         if let result = isSearchEnabled ? searchResultCharactersArray[safe: indexpath.row] : charactersArray[safe: indexpath.row] {
             cell.configureCharactersData(result: result)
+        }
+    }
+    
+    func navigateToDetailsScreen(index: Int) {
+        if let result = isSearchEnabled ? searchResultCharactersArray[safe: index] : charactersArray[safe: index] {
+            self.router.navigateToCharacterDetailsScreen(characterData: result)
         }
     }
 }

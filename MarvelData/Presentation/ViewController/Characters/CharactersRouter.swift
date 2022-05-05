@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CharacterscRouter {
-    
+    func navigateToCharacterDetailsScreen(characterData: ResultCharacters)
 }
 
 class CharacterscRouterImpl: CharacterscRouter {
@@ -16,5 +16,12 @@ class CharacterscRouterImpl: CharacterscRouter {
 
     init(viewController: CharactersViewController) {
         self.viewController = viewController
+    }
+    
+    func navigateToCharacterDetailsScreen(characterData: ResultCharacters) {
+        let characterDetailsVC = CharacterDetailsViewController.instantiateFrom(.mainStoryBoard)
+        characterDetailsVC.configurator = CharacterDetailsConfiguratorImpl(charactersData: characterData)
+        
+        self.viewController?.navigationController?.pushViewController(characterDetailsVC, animated: true)
     }
 }

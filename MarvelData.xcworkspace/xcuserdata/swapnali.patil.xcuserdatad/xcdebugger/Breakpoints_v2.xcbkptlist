@@ -26,8 +26,8 @@
             filePath = "MarvelData/Presentation/ViewController/Characters/CharactersViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "searchResult(searchText:)"
             landmarkType = "7">
             <Locations>
@@ -74,8 +74,8 @@
             filePath = "MarvelData/Presentation/ViewController/Characters/CharactersViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "closeSearchHistory()"
             landmarkType = "7">
          </BreakpointContent>
