@@ -1,0 +1,6 @@
+framework module Pods_MarvelData {
+  umbrella header "Pods-MarvelData-umbrella.h"
+
+  export *
+  module * { export * }
+}
