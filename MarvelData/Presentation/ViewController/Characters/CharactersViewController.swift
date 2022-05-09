@@ -18,10 +18,10 @@ class CharactersViewController: UIViewController {
     var configurator : CharactersConfigurator?
     private var loadingData = false
     private var isAllDataLoaded = false
-    var searchTask: DispatchWorkItem?
-    let font = UIFont.systemFont(ofSize: 15.0)
-    let minimumSpacingConstant: CGFloat = 5.0
-    let edgeInsetConstant: CGFloat = 10.0
+    private var searchTask: DispatchWorkItem?
+    private let font = UIFont.systemFont(ofSize: 15.0)
+    private let minimumSpacingConstant: CGFloat = 5.0
+    private let edgeInsetConstant: CGFloat = 10.0
     
     override func viewDidLoad() {
         super.viewDidLoad()

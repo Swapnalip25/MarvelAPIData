@@ -8,8 +8,8 @@
 import Foundation
 
 class CharactersDataRequest: ApiRequest {
-    let limit: Int
-    let offset: Int
+    private let limit: Int
+    private let offset: Int
     
     init(limit: Int, offset: Int) {
         self.limit = limit

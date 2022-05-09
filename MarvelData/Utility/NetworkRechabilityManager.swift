@@ -9,7 +9,7 @@ import Foundation
 import Reachability
 
 class NetworkManager: NSObject {
-    var reachability: Reachability!
+    private var reachability: Reachability!
     static let sharedInstance: NetworkManager = {
         return NetworkManager()
     }()

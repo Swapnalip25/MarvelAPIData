@@ -40,10 +40,10 @@ class CharactersPresenterImpl: CharactersPresenter {
     private var charactersArray: [ResultCharacters] = []
     private var searchResultCharactersArray: [ResultCharacters] = []
     private var searchResultHistoryArray: [String] = []
-    var isSearchEnabled: Bool = false
-    let defaults = UserDefaults.standard
-    var searchHistoryArray: [String] = []
-    var searchText: String = "" {
+    private var isSearchEnabled: Bool = false
+    private let defaults = UserDefaults.standard
+    private var searchHistoryArray: [String] = []
+    private var searchText: String = "" {
         willSet(newValue) {
             if newValue.trimmingCharacters(in: .whitespaces).isEmpty {
                 isSearchEnabled = false

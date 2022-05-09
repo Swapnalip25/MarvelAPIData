@@ -11,7 +11,7 @@ import SwiftKeychainWrapper
 enum KeyConstant {
     static let strAPIKey = "APIKey"
     static let strPrivateKey = "PrivateKey"
-    static let APIKeyValue = "31a12201f01fca232b3bc380d3d2de7d" //TODO: save these key in keychain
+    static let APIKeyValue = "31a12201f01fca232b3bc380d3d2de7d"
     static let PrivateKeyValue = "fb92bfe19243285af803d8d690ee7514c3de0685"
 }
 

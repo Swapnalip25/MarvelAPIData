@@ -41,11 +41,11 @@ class ComicPresenterImpl: ComicPresenter {
     private var view: ComicOutput
     private var router: ComicRouter
     private var useCaseLocator: UseCaseLocator
-    private var usecase: ComicDataUseCase?
+    private var usecase: ComicDataUseCase
     private var comicArray: [ResultComic] = []
     private var searchResultComicArray: [ResultComic] = []
-    var isSearchEnabled: Bool = false
-    var searchText: String = "" {
+    private var isSearchEnabled: Bool = false
+    private var searchText: String = "" {
         willSet(newValue) {
             if newValue.trimmingCharacters(in: .whitespaces).isEmpty {
                 isSearchEnabled = false
@@ -64,7 +64,7 @@ class ComicPresenterImpl: ComicPresenter {
         self.view = view
         self.router = router
         self.useCaseLocator = locator
-        self.usecase = locator.getUseCase(ofType: ComicDataUseCase.self)
+        self.usecase = locator.getUseCase(ofType: ComicDataUseCase.self)!
         self.sortingType = .SortTypeNone
     }
     
@@ -78,7 +78,7 @@ class ComicPresenterImpl: ComicPresenter {
             return
         }
         self.activityStartAnimating()
-        self.usecase?.getComicsData(pageOffset: 0, sortType: self.sortingType) { [weak self] responce, error in
+        self.usecase.getComicsData(pageOffset: 0, sortType: self.sortingType) { [weak self] responce, error in
             guard let result = responce else {
                 self?.view.showToastMessage(msg: AppError.errAPIFailure)
                 self?.hideActivityIndicator()
@@ -97,7 +97,7 @@ class ComicPresenterImpl: ComicPresenter {
             self.view.showToastMessage(msg: NetworkErrorMessage.strNoInternetConnection)
             return
         }
-        self.usecase?.getComicsData(pageOffset: self.comicArray.count, sortType: self.sortingType) { [weak self] responce, error in
+        self.usecase.getComicsData(pageOffset: self.comicArray.count, sortType: self.sortingType) { [weak self] responce, error in
             guard let result = responce else {
                 self?.view.showToastMessage(msg: AppError.errAPIFailure)
                 self?.hideActivityIndicator()

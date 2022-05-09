@@ -12,7 +12,7 @@ protocol CharacterDetailsConfigurator {
 }
 
 class CharacterDetailsConfiguratorImpl: CharacterDetailsConfigurator {
-    let charactersData: ResultCharacters?
+    private let charactersData: ResultCharacters
     
     init(charactersData: ResultCharacters) {
         self.charactersData = charactersData

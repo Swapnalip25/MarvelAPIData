@@ -17,10 +17,10 @@ class ComicsViewController: UIViewController {
     private var isAllDataLoaded = false
     var presenter: ComicPresenter?
     var configurator: ComicConfigurator?
-    var searchTask: DispatchWorkItem?
-    let minimumSpacingConstant: CGFloat = 5.0
-    let edgeInsetConstant: CGFloat = 10.0
-    let fontSize = 15.0
+    private var searchTask: DispatchWorkItem?
+    private let minimumSpacingConstant: CGFloat = 5.0
+    private let edgeInsetConstant: CGFloat = 10.0
+    private let fontSize = 15.0
     
     override func viewDidLoad() {
         super.viewDidLoad()

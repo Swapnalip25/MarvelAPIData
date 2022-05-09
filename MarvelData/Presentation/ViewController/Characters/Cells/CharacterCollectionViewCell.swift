@@ -13,10 +13,10 @@ class CharacterCollectionViewCell: UICollectionViewCell, ImageLoader {
     @IBOutlet private weak var lblTitle: UILabel!
     @IBOutlet private weak var containerView: UIView!
     private let cornerRadius: CGFloat = 10.0
-    
+    private let borderWidth: CGFloat = 0.5
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.contentView.layer.borderWidth = 0.5
+        self.contentView.layer.borderWidth = borderWidth
         self.contentView.layer.borderColor = UIColor.lightGray.cgColor
         self.contentView.layer.cornerRadius = cornerRadius
         self.imgCharactersThumbnail?.image = nil

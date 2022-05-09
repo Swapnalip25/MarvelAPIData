@@ -12,7 +12,7 @@ class ComicCollectionViewCell: UICollectionViewCell, ImageLoader {
     @IBOutlet private weak var imgComicThumbnail: UIImageView!
     @IBOutlet private weak var lblTitle: UILabel!
     @IBOutlet private weak var containerView: UIView!
-    let cornerRadiusConstant: CGFloat = 10.0
+    private let cornerRadiusConstant: CGFloat = 10.0
     
     override func awakeFromNib() {
         super.awakeFromNib()        

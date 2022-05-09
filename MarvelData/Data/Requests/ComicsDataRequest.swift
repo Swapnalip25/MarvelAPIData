@@ -8,9 +8,9 @@
 import Foundation
 
 class ComicsDataRequest: ApiRequest {
-    let limit: Int
-    let offset: Int
-    let dateDescriptor: String
+    private let limit: Int
+    private let offset: Int
+    private let dateDescriptor: String
     
     init(limit: Int, offset: Int, type: SortType) {
         self.limit = limit
