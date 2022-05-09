@@ -26,17 +26,13 @@ class CharacterDetailsViewController: UIViewController {
 
 }
 
-extension CharacterDetailsViewController: CharacterDetailsOutput {
+extension CharacterDetailsViewController: CharacterDetailsOutput, ImageLoader {
     func loadDataOnUI() {
         if let characterData = self.presenter?.getCharactersData() {
             if let http = URL(string: characterData.thumbnail.path + CellConstants.imageExtension), var comps = URLComponents(url: http, resolvingAgainstBaseURL: false) {
                 comps.scheme = CellConstants.httpsScheme
                 if let https = comps.url {
-                    self.imgCharactersThumbnail?.image = nil
-                    self.imgCharactersThumbnail?.sd_setImage(with: https, placeholderImage: UIImage.init(named: CellConstants.placeholderImage))
-                    self.imgCharactersThumbnail?.contentMode = .scaleToFill
-                    self.imgCharactersThumbnail?.clipsToBounds = true
-                    self.imgCharactersThumbnail?.setNeedsDisplay()
+                    self.setImage(imageView: self.imgCharactersThumbnail, url: https)
                 }
             }
             self.lblTitle.text = characterData.name

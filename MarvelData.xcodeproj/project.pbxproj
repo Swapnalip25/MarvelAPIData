@@ -72,6 +72,7 @@
 		E4539BFB2823DE9A00EA82CA /* ComicDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4539BFA2823DE9A00EA82CA /* ComicDetailsPresenter.swift */; };
 		E4539BFD2823DEA700EA82CA /* ComicDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4539BFC2823DEA700EA82CA /* ComicDetailsRouter.swift */; };
 		E4539BFF2823DEBB00EA82CA /* ComicDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4539BFE2823DEBB00EA82CA /* ComicDetailsViewController.swift */; };
+		E4A56175282901E500D7DEEA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A56174282901E500D7DEEA /* ImageLoader.swift */; };
 		E4EC3B2E70B34C2ECD428562 /* Pods_MarvelData_MarvelDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA9A8B1BFAE0B53E7EB639E /* Pods_MarvelData_MarvelDataUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -170,6 +171,7 @@
 		E4539BFA2823DE9A00EA82CA /* ComicDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsPresenter.swift; sourceTree = "<group>"; };
 		E4539BFC2823DEA700EA82CA /* ComicDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsRouter.swift; sourceTree = "<group>"; };
 		E4539BFE2823DEBB00EA82CA /* ComicDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsViewController.swift; sourceTree = "<group>"; };
+		E4A56174282901E500D7DEEA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		E6513F9BB1E9C601E7AC2681 /* Pods-MarvelData-MarvelDataUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelData-MarvelDataUITests.debug.xcconfig"; path = "Target Support Files/Pods-MarvelData-MarvelDataUITests/Pods-MarvelData-MarvelDataUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,6 +294,7 @@
 				E4539BBF281F0B1B00EA82CA /* ToastView.swift */,
 				E4539BCB28200F2900EA82CA /* KeyConstants.swift */,
 				E4539BF52823B2C400EA82CA /* ViewUtility.swift */,
+				E4A56174282901E500D7DEEA /* ImageLoader.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -805,6 +808,7 @@
 				E40D1343280F33F100575EA1 /* ComicsPresenter.swift in Sources */,
 				E4539BBE281F05EE00EA82CA /* KeychainManager.swift in Sources */,
 				E40D1349280F35FF00575EA1 /* ComicsDataModel.swift in Sources */,
+				E4A56175282901E500D7DEEA /* ImageLoader.swift in Sources */,
 				E4539BF42823B0B400EA82CA /* CharacterDetailsRouter.swift in Sources */,
 				E40D1335280F334700575EA1 /* CharactersModelData.swift in Sources */,
 				E4539BFD2823DEA700EA82CA /* ComicDetailsRouter.swift in Sources */,
