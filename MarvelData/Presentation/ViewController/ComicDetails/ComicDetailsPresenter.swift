@@ -18,9 +18,9 @@ protocol ComicDetailsOutput: AnyObject {
 class ComicDetailsPresenterImpl: ComicDetailsPresenter {
     private var view: ComicDetailsOutput
     private var router: ComicDetailsRouter
-    private var comicData: ResultComic?
+    private var comicData: ResultComic
     
-    init(view: ComicDetailsOutput, router: ComicDetailsRouter, comicData: ResultComic?) {
+    init(view: ComicDetailsOutput, router: ComicDetailsRouter, comicData: ResultComic) {
         self.view = view
         self.router = router
         self.comicData = comicData

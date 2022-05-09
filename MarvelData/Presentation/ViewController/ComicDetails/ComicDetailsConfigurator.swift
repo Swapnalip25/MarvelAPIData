@@ -12,7 +12,7 @@ protocol ComicDetailsConfigurator {
 }
 
 class ComicDetailsConfiguratorImpl: ComicDetailsConfigurator {
-    let comicData: ResultComic?
+    private let comicData: ResultComic
     
     init(comicData: ResultComic) {
         self.comicData = comicData

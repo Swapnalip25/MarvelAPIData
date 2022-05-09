@@ -10,9 +10,9 @@ import SDWebImage
 
 class CharactersViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var tableView: UITableView!
     
     var presenter : CharactersPresenter?
     var configurator : CharactersConfigurator?

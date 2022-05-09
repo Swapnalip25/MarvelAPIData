@@ -10,10 +10,10 @@ import SDWebImage
 
 class CharacterDetailsViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imgCharactersThumbnail: UIImageView!
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var imgCharactersThumbnail: UIImageView!
+    @IBOutlet private weak var lblTitle: UILabel!
+    @IBOutlet private weak var lblDescription: UILabel!
     
     var presenter: CharacterDetailsPresenter?
     var configurator: CharacterDetailsConfigurator?

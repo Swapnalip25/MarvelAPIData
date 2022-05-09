@@ -9,9 +9,9 @@ import UIKit
 
 class ComicCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var imgComicThumbnail: UIImageView!
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet private weak var imgComicThumbnail: UIImageView!
+    @IBOutlet private weak var lblTitle: UILabel!
+    @IBOutlet private weak var containerView: UIView!
     let cornerRadiusConstant: CGFloat = 10.0
     
     override func awakeFromNib() {

@@ -9,9 +9,9 @@ import UIKit
 
 class CharacterCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var imgCharactersThumbnail: UIImageView!
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet private weak var imgCharactersThumbnail: UIImageView!
+    @IBOutlet private weak var lblTitle: UILabel!
+    @IBOutlet private weak var containerView: UIView!
     
     let cornerRadius: CGFloat = 10.0
     

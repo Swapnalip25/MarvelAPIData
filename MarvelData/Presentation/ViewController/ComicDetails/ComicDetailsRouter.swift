@@ -12,7 +12,7 @@ protocol ComicDetailsRouter {
 }
 
 class ComicDetailsRouterImpl: ComicDetailsRouter {
-    fileprivate weak var viewController: ComicDetailsViewController?
+    private weak var viewController: ComicDetailsViewController?
 
     init(viewController: ComicDetailsViewController) {
         self.viewController = viewController
